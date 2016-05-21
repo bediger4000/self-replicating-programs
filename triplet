@@ -1,0 +1,16 @@
+#!/bin/bash
+# BP - python #!, BS - bash #!, BR - perl #!, BT - php #!
+S="'"; D='"'; E=';'; C=','; X='$'; Y='\'; BP='#!/usr/bin/env python2'; BS='#!/bin/bash'; BR='#!/usr/bin/env perl'; BT='#!/usr/bin/env php'
+# GS - bash genome.  BP - python genome. BR - perl genome.  BT - PHP genome.
+# bash prints out python script
+GS='echo $BP; echo S=$D$S$D$E D=$S$D$S$E E=$S$E$S$E C=$S$C$S$E X=$S$X$S$E Y=$S$Y$Y$S$E BP=$S$BP$S$E BS=$S$BS$S$E BR=$S$BR$S$E BT=$S$BT$S; echo GS=$S$GS$S; echo GP=$S$GP$S; echo GR=$S$GR$S; echo GT=$S$GT$S; echo $GP'
+# python prints out perl script, python has to create $NL perl variable.
+GP='print BR; print "$NL="+D+Y+"n"+D+E, "$S="+D+S+D+E, "$D="+S+D+S+E, "$E="+S+E+S+E, "$C="+S+C+S+E, "$X="+S+X+S+E, "$Y="+S+Y+Y+S+E, "$BP="+S+BP+S+E, "$BS="+S+BS+S+E, "$BR="+S+BR+S+E, "$BT="+S+BT+S+E; print "$GS="+S+GS+S+E; print "$GP="+S+GP+S+E; print "$GR="+S+GR+S+E; print "$GT="+S+GT+S+E; print GR'
+# perl prints out PHP script.  Perl also creates $NL PHP variable, and '<?php' and '?>'.
+# Note that perl and php share the "$identifier" notation for variable assignment,
+# which causes a bit of trouble that doesn't exist when python writes perl.
+GR='print $BT.$NL; print "<?php".$NL; print $X."NL=$D$Y"."n$D$E "; print $X."S=$D$S$D$E ".$X."D=$S$D$S$E ".$X."E=$S$E$S$E ".$X."C=$S$C$S$E ".$X."X=$S$X$S$E ".$X."Y=$S$Y$Y$S$E ".$X."BP=$S$BP$S$E ".$X."BS=$S$BS$S$E ".$X."BR=$S$BR$S$E ".$X."BT=$S$BT$S$E".$NL; print $X."GS=$S$GS$S$E".$NL; print $X."GP=$S$GP$S$E".$NL; print $X."GR=$S$GR$S$E".$NL; print $X."GT=$S$GT$S$E".$NL; print $X."GS=$S$GS$S$E".$NL; print $GT.$NL; print "?>".$NL;'
+# PHP script prints out bash script
+GT='echo $BS.$NL; echo "S=$D$S$D$E D=$S$D$S$E E=$S$E$S$E C=$S$C$S$E X=$S$X$S$E Y=$S$Y$S$E BP=$S$BP$S$E BS=$S$BS$S BR=$S$BR$S BT=$S$BT$S".$NL; echo "GS=$S$GS$S".$NL; echo "GP=$S$GP$S".$NL; echo "GR=$S$GR$S$E".$NL; echo "GT=$S$GT$S$E".$NL; echo $GS;'
+# execute bash tasks.
+echo $BP; echo S=$D$S$D$E D=$S$D$S$E E=$S$E$S$E C=$S$C$S$E X=$S$X$S$E Y=$S$Y$Y$S$E BP=$S$BP$S$E BS=$S$BS$S$E BR=$S$BR$S$E BT=$S$BT$S; echo GS=$S$GS$S; echo GP=$S$GP$S; echo GR=$S$GR$S; echo GT=$S$GT$S; echo $GP

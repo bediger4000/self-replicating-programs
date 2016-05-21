@@ -1,0 +1,28 @@
+#!/bin/bash
+
+rm -f m[1-9] m1[1-9]
+
+# triplet generates m1, the first script in the cycle.
+./triplet > m1
+
+# m1, m5, m9 - python scripts
+# m2, m6, m10 - perl scripts
+# m3, m7, m11 - bash scripts
+# m4, m8, m12 - php scripts
+
+for N in 1 2 3 4 5 6 7 8 9 10 11 12
+do
+	chmod +x m$N
+	M=$((N + 1))
+	echo "Running m$N, output to m$M"
+	eval "./m$N > ./m$M"
+done
+
+echo
+cksum m1 m5 m9
+echo
+cksum m2 m6 m10
+echo
+cksum m3 m7 m11
+echo
+cksum m4 m8 m12
