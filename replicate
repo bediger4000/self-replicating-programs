@@ -1,0 +1,4 @@
+S="'"; D='"'; E=';'; B='`'; X='$'
+Z=` expr 0 + 1`
+G='echo S=$D$S$D$E D=$S$D$S$E E=$S$E$S$E B=$S$B$S$E X=$S$X$S; echo Z=$B expr $Z + 1$B; echo G=$S$G$S; echo $G'
+echo S=$D$S$D$E D=$S$D$S$E E=$S$E$S$E B=$S$B$S$E X=$S$X$S; echo Z=$B expr $Z + 1$B; echo G=$S$G$S; echo $G
