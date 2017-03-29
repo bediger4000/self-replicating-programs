@@ -1,5 +1,5 @@
 # self-replicating-programs
-##A number of self replicating programs
+## A number of self replicating programs
 
 * `q2.php` - PHP
 * `self_replicating.py` - Python 2.x
