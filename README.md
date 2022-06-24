@@ -17,7 +17,7 @@ The specifics of this are peculiar to each language,
 but are reminiscent of Combinatory Logic's `M M` term.
 
 The `m4` macro processor self-replicator is of interest.
-First, `m4` doesn't have a way to escape characters in its input.
+First, `m4` input doesn't have a way to escape characters in its input.
 Second, `m4` quoted strings use matched pairs of "grave accents" (\`) (ASCII 0x27)
 and single quotes (\') (ASCII 0x2c),
 allowing embedding quoted strings in quoted strings.
@@ -27,3 +27,4 @@ it's not too hard to write a self-replicating `m4` input.
 Avoiding a trivial self replicator is the hard part.
 Any input that does not define and use a macro
 will cause `m4` to produce output identical to its input.
+[m4 macro language notes](https://mbreen.com/m4.html)
