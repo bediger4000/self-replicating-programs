@@ -1,5 +1,5 @@
 # self-replicating-programs
-## A number of self replicating programs
+## A number of self replicating programs (quines)
 
 * [PHP](q2.php), probably v5.x on into v8.0.2
 * `self_replicating.py` - Python 2.x
