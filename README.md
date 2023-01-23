@@ -9,12 +9,20 @@
 * [Shell script](replicate), Bash, probably ksh. Changes just a little with each reproduction.
 * [Python 3.x "f" strings](fstrings.py)
 * [GNU m4 macro](r1.m4)
+* [awk](r.awk)
 
-The Python3, m4 and PHP versions are conceptually similar to
+The Python3, m4, awk and PHP versions are conceptually similar to
 my [Go self-replicating program](https://github.com/bediger4000/Self-replicating-go/)
 in that they all use a formatting string as an argument to formatting.
 The specifics of this are peculiar to each language,
 but are reminiscent of Combinatory Logic's `M M` term.
+
+Because `awk` expects to read lines of text on stdin,
+you have to run the self-replicating `awk` program like this:
+
+```
+$ awk -f r.awk < /dev/null
+```
 
 The `m4` macro processor self-replicator is of interest.
 First, `m4` input doesn't have a way to escape characters in its input.
