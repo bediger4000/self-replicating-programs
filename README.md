@@ -10,6 +10,7 @@
 * [Python 3.x "f" strings](fstrings.py)
 * [GNU m4 macro](r1.m4)
 * [awk](r.awk)
+* [GPP](r.gpp)
 
 The Python3, m4, awk and PHP versions are conceptually similar to
 my [Go self-replicating program](https://github.com/bediger4000/Self-replicating-go/)
@@ -34,4 +35,14 @@ it's not too hard to write a self-replicating `m4` input.
 Avoiding a trivial self replicator is the hard part.
 Any input that does not define and use a macro
 will cause `m4` to produce output identical to its input.
+Using the `defn` builtin,
+which doesn't technically violate the rules of writing quines,
+seems roughly equivalent to those programs that open the
+file of their own source and write it out.
+
 [m4 macro language notes](https://mbreen.com/m4.html)
+
+A quine in
+[GPP](https://logological.org/gpp) (and [here](https://arxiv.org/abs/2008.00840v1),
+the Generic Preprocessor,
+is terrifically difficult.
