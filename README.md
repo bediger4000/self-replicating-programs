@@ -17,11 +17,10 @@ in that they all use a formatting string as an argument to formatting.
 The specifics of this are peculiar to each language,
 but are reminiscent of Combinatory Logic's `M M` term.
 
-Because `awk` expects to read lines of text on stdin,
-you have to run the self-replicating `awk` program like this:
+You have to run the self-replicating `awk` program like this:
 
 ```
-$ awk -f r.awk < /dev/null
+$ awk -f r.awk
 ```
 
 The `m4` macro processor self-replicator is of interest.
