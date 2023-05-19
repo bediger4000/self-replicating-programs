@@ -42,7 +42,22 @@ file of their own source and write it out.
 
 [m4 macro language notes](https://mbreen.com/m4.html)
 
-A quine in
-[GPP](https://logological.org/gpp) (and [here](https://arxiv.org/abs/2008.00840v1),
+I found writing a quine in
+[GPP](https://logological.org/gpp) (and [here](https://arxiv.org/abs/2008.00840v1)),
 the Generic Preprocessor,
-is terrifically difficult.
+terrifically difficult.
+
+Default user macros make it impossible to interpolate strings in macro bodies
+and in outputs without also having whitespace.
+Bash can interpolate variables like this: `some${variable}text`,
+using curly braces to lexically mark the variable. Default GPP doesn't have that.
+
+Default string format, and macro expansion inside strings make it
+easy to write infinitely-expanding macros
+In contrast, Python has `'`, `"` and `"""` delimiters for strings,
+Bash, PHP and Perl have `"` and `'`, Go has `"` and `\'`.
+In all of these languages, one mode of delimiting strings allows
+variable interpolation, and one mode does not allow it.
+
+I used GPP's "meta macros" to change macro definition and macro expansion
+rules part way through the quine to overcome these difficulties.
