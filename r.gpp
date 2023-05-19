@@ -1,16 +1,14 @@
-#define B `
 #define S '
 #define H #
 #define D $
 #mode user "$" "$" "(" "," ")" "(" ")" "#" ""
-#mode string qqq "`" "'"
-#define g `$H$define B $B$
-$H$define S $S$
+#mode string qqq "'" "'"
+#define g '$H$define S $S$
 $H$define H $H$
 $H$define D $D$
 $H$mode user "$" "$" "(" "," ")" "(" ")" "$H$" ""
-$H$mode string qqq "$B$" "$S$"
-$H$define g $B$#1$S$
+$H$mode string qqq "$S$" "$S$"
+$H$define g $S$#1$S$
 $H$defeval quine $D$g$D$
 $D$quine($D$g$D$)'
 #defeval quine $g$
