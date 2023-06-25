@@ -61,3 +61,5 @@ variable interpolation, and one mode does not allow it.
 
 I used GPP's "meta macros" to change macro definition and macro expansion
 rules part way through the quine to overcome these difficulties.
+I'd be interested in seeing a GPP quine that does not use meta macros
+to change default string interpolation and macro substitution behavior.
