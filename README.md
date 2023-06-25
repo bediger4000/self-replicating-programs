@@ -55,7 +55,7 @@ using curly braces to lexically mark the variable. Default GPP doesn't have that
 Default string format, and macro expansion inside strings make it
 easy to write infinitely-expanding macros
 In contrast, Python has `'`, `"` and `"""` delimiters for strings,
-Bash, PHP and Perl have `"` and `'`, Go has `"` and `\``.
+Bash, PHP and Perl have `"` and `'`, Go has `"` and `.
 In all of these languages, one mode of delimiting strings allows
 variable interpolation, and one mode does not allow it.
 
