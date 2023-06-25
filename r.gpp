@@ -1,9 +1,11 @@
+#mode preservelf off
 #define S '
 #define H #
 #define D $
 #mode user "$" "$" "(" "," ")" "(" ")" "#" ""
 #mode string qqq "'" "'"
-#define g '$H$define S $S$
+#define g '$H$mode preservelf off
+$H$define S $S$
 $H$define H $H$
 $H$define D $D$
 $H$mode user "$" "$" "(" "," ")" "(" ")" "$H$" ""
