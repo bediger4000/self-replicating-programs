@@ -45,7 +45,7 @@ file of their own source and write it out.
 I found writing a quine in
 [GPP](https://logological.org/gpp) (and [here](https://arxiv.org/abs/2008.00840v1)),
 the Generic Preprocessor,
-terrifically difficult.
+[terrifically difficult](gpp-quine.md).
 
 Default user macros make it impossible to interpolate strings in macro bodies
 and in outputs without also having whitespace.
